@@ -1,53 +1,196 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asmahan Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BJ Designer - Asmahan Nasir Portfolio</title>
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-bg: #0a0a0a;
+            --text-gray: #cccccc;
+        }
 
-<style>
-body { margin:0; font-family: Arial; background:#111; color:#fff; }
-nav { background:#000; padding:15px; text-align:center; }
-nav a { color:#fff; margin:0 15px; text-decoration:none; }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: white;
+            line-height: 1.6;
+        }
 
-section { padding:50px; display:none; }
-section.active { display:block; }
+        /* الهيدر وشعار BJ Designer */
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #1a1a1a, var(--dark-bg));
+        }
 
-h1 { color:#fff; }
-</style>
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--primary-gold);
+            margin: 0;
+        }
+
+        .tagline {
+            font-size: 1.1em;
+            color: var(--text-gray);
+            margin-top: 10px;
+        }
+
+        /* قسم التعريف الشخصي */
+        .hero {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-gray);
+        }
+
+        /* شبكة الخدمات والمحتوى */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .service-card {
+            background: #151515;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #222;
+            transition: transform 0.3s;
+        }
+
+        .service-card h3 {
+            color: var(--primary-gold);
+            margin-top: 0;
+        }
+
+        /* قسم "ليش تختارني" */
+        .why-me {
+            background-color: #111;
+            padding: 50px 20px;
+            margin-top: 40px;
+        }
+
+        .why-me h2 {
+            text-align: center;
+            color: var(--primary-gold);
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .benefits-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+        }
+
+        .benefits-list li::before {
+            content: "✦";
+            color: var(--primary-gold);
+            margin-left: 15px;
+        }
+
+        /* الفوتر وأزرار التواصل */
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            background: #000;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--primary-gold);
+            color: #000;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: opacity 0.3s;
+        }
+
+        .social-links {
+            margin-top: 30px;
+            color: var(--text-gray);
+        }
+
+        /* استجابة الهاتف */
+        @media (max-width: 600px) {
+            .logo { font-size: 1.8em; }
+            .hero h1 { font-size: 1.4em; }
+        }
+    </style>
 </head>
-
 <body>
 
-<nav>
-  <a href="#" onclick="showPage('home')">الرئيسية</a>
-  <a href="#" onclick="showPage('portfolio')">أعمالي</a>
-  <a href="#" onclick="showPage('contact')">تواصل</a>
-</nav>
+    <header>
+        <p class="logo">BJ DESIGNER</p>
+        <p class="tagline">عالم من الإبداع بالذكاء الاصطناعي</p>
+    </header>
 
-<section id="home" class="active">
-  <h1>مرحبا 👋</h1>
-  <p>مصممة AI - تحويل الصور إلى محتوى إعلاني احترافي</p>
-</section>
+    <section class="hero">
+        <h1>رؤية تتجاوز الحدود</h1>
+        <p>أنا مصممة متخصصة في تصميم المحتوى باستخدام الذكاء الاصطناعي (AI). أحوّل الأفكار إلى تجارب بصرية متكاملة بدون الحاجة إلى استوديو أو تصوير مكلف.</p>
+    </section>
 
-<section id="portfolio">
-  <h1>أعمالي</h1>
-  <p>هنا تضيفين صورك أو فيديوهاتك</p>
-</section>
+    <section class="services">
+        <div class="service-card">
+            <h3>إعلانات احترافية</h3>
+            <p>مشاهد إعلانية كاملة ودمج الذكاء الاصطناعي مع التصوير التجاري لإبراز بريق الفخامة.</p>
+        </div>
+        <div class="service-card">
+            <h3>مودلز افتراضية</h3>
+            <p>إنشاء شخصيات واقعية وتفاعلية لعرض المنتجات بلمسة سينمائية جذابة.</p>
+        </div>
+        <div class="service-card">
+            <h3>تعليق صوتي (AI)</h3>
+            <p>أصوات احترافية متعددة تمنح محتواك هوية صوتية قوية ومؤثرة.</p>
+        </div>
+        <div class="service-card">
+            <h3>منيو تفاعلي</h3>
+            <p>تصميم تجربة المنيو التي تدمج الموشن جرافيك لجعل كل طبق يتحدث عن نفسه.</p>
+        </div>
+    </section>
 
-<section id="contact">
-  <h1>تواصل</h1>
-  <p>ايميل / واتساب</p>
-</section>
+    <section class="why-me">
+        <h2>ليش تختارني؟</h2>
+        <ul class="benefits-list">
+            <li>تقليل تكاليف الإنتاج بشكل هائل</li>
+            <li>سرعة تنفيذ عالية جداً</li>
+            <li>أفكار إبداعية غير تقليدية</li>
+            <li>نتائج مثالية للسوشيال ميديا والإعلانات</li>
+        </ul>
+    </section>
 
-<script>
-function showPage(pageId) {
-  document.querySelectorAll("section").forEach(sec => {
-    sec.classList.remove("active");
-  });
-  document.getElementById(pageId).classList.add("active");
-}
-</script>
+    <footer>
+        <h2>شكراً جزيلاً</h2>
+        <p>استكشف كيف نحول الأفكار إلى واقع يبهر عملاءك في السوق السعودي والتركي.</p>
+        <a href="https://wa.me/966576396922" class="contact-btn">تواصل معي الآن</a>
+        <div class="social-links">
+            <p>Instagram: @bj_designerooo</p>
+            <p>Portfolio: @bjdesigner</p>
+        </div>
+    </footer>
 
 </body>
 </html>
