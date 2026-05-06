@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Portfolio - Asmahan Nasir</title>
-    <style>
-        /* إعدادات تضمن ملء الشاشة بالكامل وبدون هوامش */
-        body, html { 
-            margin: 0; 
-            padding: 0; 
-            height: 100%; 
-            width: 100%;
-            overflow: hidden; 
-            background-color: #000; 
-        }
-        /* الإطار الذي يعرض موقعك بجميع صفحاته */
-        iframe { 
-            width: 100%; 
-            height: 100%; 
-            border: none;
-            display: block;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asmahan Portfolio</title>
+
+<style>
+body { margin:0; font-family: Arial; background:#111; color:#fff; }
+nav { background:#000; padding:15px; text-align:center; }
+nav a { color:#fff; margin:0 15px; text-decoration:none; }
+
+section { padding:50px; display:none; }
+section.active { display:block; }
+
+h1 { color:#fff; }
+</style>
 </head>
+
 <body>
-    <!-- الرابط الجديد مع أمر العرض الكامل لضمان ظهور كل المحتوى -->
-    <iframe src="https://bjdesigne.my.canva.site/portfolio?view" 
-            allowfullscreen="true" 
-            allow="fullscreen; clipboard-write">
-    </iframe>
+
+<nav>
+  <a href="#" onclick="showPage('home')">الرئيسية</a>
+  <a href="#" onclick="showPage('portfolio')">أعمالي</a>
+  <a href="#" onclick="showPage('contact')">تواصل</a>
+</nav>
+
+<section id="home" class="active">
+  <h1>مرحبا 👋</h1>
+  <p>مصممة AI - تحويل الصور إلى محتوى إعلاني احترافي</p>
+</section>
+
+<section id="portfolio">
+  <h1>أعمالي</h1>
+  <p>هنا تضيفين صورك أو فيديوهاتك</p>
+</section>
+
+<section id="contact">
+  <h1>تواصل</h1>
+  <p>ايميل / واتساب</p>
+</section>
+
+<script>
+function showPage(pageId) {
+  document.querySelectorAll("section").forEach(sec => {
+    sec.classList.remove("active");
+  });
+  document.getElementById(pageId).classList.add("active");
+}
+</script>
+
 </body>
 </html>
