@@ -1,647 +1,257 @@
 <!DOCTYPE html>
-
-<html class="light" dir="rtl" lang="ar"><head>
+<html class="light scroll-smooth" dir="rtl" lang="ar"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>عيادات الرياض - السياحة الطبية الفاخرة</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "tertiary-fixed": "#e1e3e4",
-                        "surface-container-high": "#e0e9f2",
-                        "on-tertiary-fixed-variant": "#454748",
-                        "surface": "#f6faff",
-                        "secondary-fixed-dim": "#b8c7e5",
-                        "secondary": "#505f79",
-                        "on-secondary-container": "#54637d",
-                        "on-error-container": "#93000a",
-                        "primary": "#006b5f",
-                        "surface-dim": "#d2dbe4",
-                        "on-secondary-fixed-variant": "#394760",
-                        "tertiary": "#5c5f60",
-                        "on-secondary": "#ffffff",
-                        "primary-fixed": "#79f7e3",
-                        "surface-tint": "#006b5f",
-                        "error": "#ba1a1a",
-                        "outline-variant": "#bbcac5",
-                        "on-surface-variant": "#3c4946",
-                        "primary-container": "#00a896",
-                        "on-tertiary-container": "#2c2f30",
-                        "surface-container-low": "#ecf5fe",
-                        "surface-container-highest": "#dbe4ed",
-                        "on-primary-container": "#00352e",
-                        "error-container": "#ffdad6",
-                        "on-error": "#ffffff",
-                        "on-tertiary": "#ffffff",
-                        "surface-container-lowest": "#ffffff",
-                        "secondary-container": "#d1e0ff",
-                        "on-primary": "#ffffff",
-                        "background": "#f6faff",
-                        "primary-fixed-dim": "#59dbc7",
-                        "on-primary-fixed": "#00201c",
-                        "on-surface": "#141d23",
-                        "inverse-primary": "#59dbc7",
-                        "on-secondary-fixed": "#0c1c32",
-                        "secondary-fixed": "#d5e3ff",
-                        "tertiary-fixed-dim": "#c5c7c8",
-                        "inverse-surface": "#293138",
-                        "inverse-on-surface": "#e9f2fb",
-                        "on-background": "#141d23",
-                        "on-tertiary-fixed": "#191c1d",
-                        "on-primary-fixed-variant": "#005047",
-                        "tertiary-container": "#949697",
-                        "surface-variant": "#dbe4ed",
-                        "surface-container": "#e6eff8",
-                        "outline": "#6c7a76",
-                        "surface-bright": "#f6faff"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "grid-gutter": "24px",
-                        "base": "8px",
-                        "section-gap-desktop": "120px",
-                        "section-gap-mobile": "64px",
-                        "container-max-width": "1280px"
-                    },
-                    "fontFamily": {
-                        "display-lg": ["Cairo", "Inter"],
-                        "headline-md": ["Cairo", "Inter"],
-                        "display-lg-mobile": ["Cairo", "Inter"],
-                        "label-caps": ["Cairo", "Inter"],
-                        "headline-sm": ["Cairo", "Inter"],
-                        "body-lg": ["Cairo", "Inter"],
-                        "body-md": ["Cairo", "Inter"]
-                    },
-                    "fontSize": {
-                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
-                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
-                    }
-                },
-            },
-        }
-    </script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: {
+      primary: "#006b5f", "primary-container": "#00a896", "on-primary": "#ffffff",
+      background: "#f6faff", "on-background": "#141d23", "on-surface-variant": "#3c4946",
+      surface: "#f6faff", "surface-variant": "#dbe4ed", "surface-container-lowest": "#ffffff",
+      "surface-container-high": "#e0e9f2", "surface-container-highest": "#dbe4ed"
+    },
+    fontFamily: { sans: ["Cairo", "Inter", "sans-serif"] }
+  } }
+}
+</script>
 <style>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        .hero-overlay {
-            background: linear-gradient(135deg, rgba(246,250,255,0.95) 0%, rgba(246,250,255,0.7) 100%);
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
+  .hero-overlay { background: linear-gradient(135deg, rgba(246,250,255,0.95) 0%, rgba(246,250,255,0.7) 100%); }
+  section[id] { scroll-margin-top: 90px; }
+</style>
 </head>
-<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
-<!-- TopAppBar -->
-<header class="bg-surface-container-lowest dark:bg-surface-dim text-primary dark:text-primary-fixed-dim font-headline-sm text-headline-sm fixed top-0 w-full z-50 shadow-sm dark:shadow-none transition-all duration-300">
-<div class="flex justify-between items-center px-grid-gutter max-w-container-max-width mx-auto h-20">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">medical_services</span>
-<span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-primary-fixed-dim">عيادات الرياض</span>
-</div>
-<!-- Desktop Nav Cluster -->
-<nav class="hidden md:flex items-center gap-6">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary-container transition-colors duration-200" href="#">الخدمات</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary-container transition-colors duration-200" href="#">الباقات</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary-container transition-colors duration-200" href="#">المعرض</a>
-<button class="bg-primary-container text-on-primary font-body-md font-bold px-6 py-2 rounded flex items-center gap-2 hover:bg-primary transition-colors active:scale-95">
-                    استشارة
-                </button>
-</nav>
-<!-- Mobile Consult Action (if needed, otherwise rely on BottomNav) -->
-<button class="md:hidden bg-primary-container text-on-primary font-label-caps px-4 py-2 rounded flex items-center gap-2 hover:bg-primary transition-colors active:scale-95">
-                    استشارة
-            </button>
+<body style="min-height:max(884px,100dvh)" class="bg-background text-on-background font-sans antialiased min-h-screen flex flex-col">
+
+<!-- Header -->
+<header class="bg-surface-container-lowest text-primary fixed top-0 w-full z-50 shadow-sm">
+<div class="flex justify-between items-center px-6 max-w-[1280px] mx-auto h-20">
+  <a href="#top" class="flex items-center gap-2">
+    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">medical_services</span>
+    <span class="text-2xl font-bold">عيادات الرياض</span>
+  </a>
+  <nav class="hidden md:flex items-center gap-6">
+    <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#packages">الباقات</a>
+    <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#hair">زراعة الشعر</a>
+    <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#dental">الأسنان</a>
+    <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#contact">تواصل معنا</a>
+    <a data-wa="مرحباً، أرغب في استشارة" class="bg-primary-container text-on-primary font-bold px-6 py-2 rounded hover:bg-primary transition-colors">استشارة</a>
+  </nav>
+  <a data-wa="مرحباً، أرغب في استشارة" class="md:hidden bg-primary-container text-on-primary text-sm font-bold px-4 py-2 rounded hover:bg-primary">استشارة</a>
 </div>
 </header>
-<!-- Main Content -->
-<main class="flex-grow pt-20 pb-section-gap-mobile md:pb-0">
-<!-- Hero Section -->
+
+<main id="top" class="flex-grow pt-20 pb-20 md:pb-0">
+
+<!-- Hero -->
 <section class="relative min-h-[707px] flex items-center">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" data-alt="A luxurious, modern hospital interior in Istanbul. Sunlight streaming through large windows illuminating clean white surfaces and subtle turquoise accents. Professional, calm, and high-end aesthetic. Minimalist design with comfortable seating areas, creating a welcoming medical spa environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSlPCZEgTSJRflBeBV87c1JnAl6UdOkNPLX4H_8uaEIZOXVI3FIfXvSGZrK08kG6PggX4Okpwt6xkjWxaMF1r7_6NT53_LmLHtU-rfDLXg2Af8GqMiqqdq_MDGAasVrARZQ1gQNEYQVaIgkCRiAHTLHNZQosqZlFy4pv1ut9qyheRY_R_UzVR1HntPg0GucbBf6amimaqBlwUFK678zAoIyAGNTT17iJAkzIMGWWbl7PqJlHhsoPcV"/>
-<div class="absolute inset-0 hero-overlay"></div>
-</div>
-<div class="relative z-10 max-w-container-max-width mx-auto px-grid-gutter w-full grid grid-cols-1 md:grid-cols-12 gap-grid-gutter">
-<div class="md:col-span-8 lg:col-span-6 flex flex-col gap-6">
-<div class="inline-flex items-center gap-2 bg-surface-container-highest px-4 py-2 rounded-full w-fit">
-<span class="material-symbols-outlined text-primary-container text-sm">verified</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">مرافق معتمدة من JCI</span>
-</div>
-<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-background">
-                        تميز طبي <span class="text-primary-container">فاخر</span> في الرياض
-                    </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
-                        زراعة شعر وعناية بالأسنان التجميلية ذات مستوى عالمي. جرب الرعاية الصحية الفاخرة الممزوجة بالضيافة الراقية في قلب المملكة.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-4 mt-4">
-<button class="bg-primary-container text-on-primary font-body-md font-bold px-8 py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary transition-colors shadow-lg shadow-primary-container/20">
-<span class="material-symbols-outlined">chat</span>
-                            احصل على استشارة مجانية عبر الواتساب
-                        </button>
-<button class="border-2 border-primary-container text-primary-container font-body-md font-bold px-8 py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors">
-                            استكشف الباقات
-                        </button>
-</div>
-<div class="flex items-center gap-6 mt-8 pt-8 border-t border-surface-variant">
-<div class="flex flex-col">
-<span class="font-headline-sm text-headline-sm text-primary">+15 ألف</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">مريض سعيد</span>
-</div>
-<div class="w-px h-10 bg-surface-variant"></div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-headline-sm text-primary">5★</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">فنادق فاخرة</span>
-</div>
-<div class="w-px h-10 bg-surface-variant"></div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-headline-sm text-primary">24/7</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">دعم كبار الشخصيات</span>
-</div>
-</div>
-</div>
+  <div class="absolute inset-0 z-0">
+    <img class="w-full h-full object-cover" alt="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSlPCZEgTSJRflBeBV87c1JnAl6UdOkNPLX4H_8uaEIZOXVI3FIfXvSGZrK08kG6PggX4Okpwt6xkjWxaMF1r7_6NT53_LmLHtU-rfDLXg2Af8GqMiqqdq_MDGAasVrARZQ1gQNEYQVaIgkCRiAHTLHNZQosqZlFy4pv1ut9qyheRY_R_UzVR1HntPg0GucbBf6amimaqBlwUFK678zAoIyAGNTT17iJAkzIMGWWbl7PqJlHhsoPcV"/>
+    <div class="absolute inset-0 hero-overlay"></div>
+  </div>
+  <div class="relative z-10 max-w-[1280px] mx-auto px-6 w-full">
+    <div class="md:w-2/3 lg:w-1/2 flex flex-col gap-6">
+      <div class="inline-flex items-center gap-2 bg-surface-container-highest px-4 py-2 rounded-full w-fit">
+        <span class="material-symbols-outlined text-primary-container text-sm">verified</span>
+        <span class="text-xs font-semibold text-on-surface-variant">مرافق معتمدة من JCI</span>
+      </div>
+      <h1 class="text-[32px] md:text-5xl font-bold leading-tight">تميز طبي <span class="text-primary-container">فاخر</span> في الرياض</h1>
+      <p class="text-lg text-on-surface-variant max-w-lg">زراعة شعر وعناية بالأسنان التجميلية ذات مستوى عالمي. جرب الرعاية الصحية الفاخرة الممزوجة بالضيافة الراقية في قلب المملكة.</p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-2">
+        <a data-wa="مرحباً، أرغب في استشارة مجانية" class="bg-primary-container text-on-primary font-bold px-8 py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary transition-colors shadow-lg">
+          <span class="material-symbols-outlined">chat</span>
+          احصل على استشارة مجانية عبر الواتساب
+        </a>
+        <a href="#packages" class="border-2 border-primary-container text-primary-container font-bold px-8 py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors">
+          استكشف الباقات
+        </a>
+      </div>
+      <div class="flex items-center gap-6 mt-6 pt-6 border-t border-surface-variant">
+        <div><div class="text-2xl font-semibold text-primary">+15 ألف</div><div class="text-xs text-on-surface-variant">مريض سعيد</div></div>
+        <div class="w-px h-10 bg-surface-variant"></div>
+        <div><div class="text-2xl font-semibold text-primary">5★</div><div class="text-xs text-on-surface-variant">فنادق فاخرة</div></div>
+        <div class="w-px h-10 bg-surface-variant"></div>
+        <div><div class="text-2xl font-semibold text-primary">24/7</div><div class="text-xs text-on-surface-variant">دعم كبار الشخصيات</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Packages -->
+<section id="packages" class="py-16 md:py-24 bg-surface px-6">
+<div class="max-w-[1280px] mx-auto">
+  <div class="text-center mb-10 flex flex-col items-center">
+    <h2 class="text-3xl font-semibold mb-4">باقات طبية شاملة</h2>
+    <p class="text-on-surface-variant max-w-2xl">تسعير شفاف بدون تكاليف خفية. كل باقة تتضمن علاجك، إقامة فاخرة، وتنقلات كبار الشخصيات.</p>
+    <div class="flex gap-3 mt-6">
+      <a href="#hair" class="px-5 py-2 rounded-full bg-primary-container text-on-primary font-bold text-sm">باقات زراعة الشعر</a>
+      <a href="#dental" class="px-5 py-2 rounded-full border-2 border-primary-container text-primary-container font-bold text-sm">باقات الأسنان</a>
+    </div>
+  </div>
+
+  <!-- Hair packages -->
+  <h3 id="hair" class="text-2xl font-semibold mb-6 flex items-center gap-2 scroll-mt-24">
+    <span class="material-symbols-outlined text-primary-container">spa</span> باقات زراعة الشعر
+  </h3>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+
+    <div class="bg-surface-container-lowest rounded-xl border border-surface-variant shadow-sm overflow-hidden flex flex-col">
+      <div class="h-64 relative"><img class="w-full h-full object-cover" alt="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0GFr7G-izFljDU_kipfYyvFtAzY0anWKh-eQjyrGPeCkQGQMU6YKUpARFyiSA-xRyzKBRC5bbHop_ZFC10YrD8M9Rj0uUEFrXMXmbBlEkiVeblPVGQ1o23wSatSwPs3is7KXDwLKCAjFGS2Hq_P-Qk_70n7GQtC0GTuSq_yGQu3lVoAXlinaCSXpldCVRAPE8jb-c60KhZkl1ABMTady6Hm9UlBatCVxfmMUsOjABMnN6DlFH0q4a"/><div class="absolute inset-0 bg-primary-container/5 mix-blend-multiply"></div></div>
+      <div class="p-6 flex flex-col flex-grow">
+        <h4 class="text-xl font-semibold mb-2">الباقة الكلاسيك FUE</h4>
+        <p class="text-on-surface-variant mb-5">زراعة بتقنية FUE مع متابعة ما بعد العملية.</p>
+        <ul class="space-y-3 mb-6 flex-grow">
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">medical_services</span>علاج كامل وأدوية</li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">bed</span>2 ليلة في فندق 5 نجوم</li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">airport_shuttle</span>تنقلات المطار</li>
+        </ul>
+        <div class="pt-5 border-t border-surface-variant mb-5">
+          <span class="text-xs text-on-surface-variant block">تبدأ من</span>
+          <span class="text-2xl text-primary font-bold">6,200 ر.س</span>
+        </div>
+        <a data-wa="مرحباً، أرغب في حجز باقة الكلاسيك FUE لزراعة الشعر" class="w-full border-2 border-primary-container text-primary-container font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-high">احجز الآن</a>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-xl border-2 border-primary-container shadow-md overflow-hidden flex flex-col relative">
+            <div class="h-64 relative"><img class="w-full h-full object-cover" alt="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0GFr7G-izFljDU_kipfYyvFtAzY0anWKh-eQjyrGPeCkQGQMU6YKUpARFyiSA-xRyzKBRC5bbHop_ZFC10YrD8M9Rj0uUEFrXMXmbBlEkiVeblPVGQ1o23wSatSwPs3is7KXDwLKCAjFGS2Hq_P-Qk_70n7GQtC0GTuSq_yGQu3lVoAXlinaCSXpldCVRAPE8jb-c60KhZkl1ABMTady6Hm9UlBatCVxfmMUsOjABMnN6DlFH0q4a"/><div class="absolute inset-0 bg-primary-container/5 mix-blend-multiply"></div><div class="absolute top-4 left-4 bg-surface-container-lowest/90 backdrop-blur px-3 py-1 rounded-full"><span class="text-xs font-bold text-primary-container">الأكثر شهرة</span></div></div>
+      <div class="p-6 flex flex-col flex-grow">
+        <h4 class="text-xl font-semibold mb-2">زراعة الشعر بتقنية السفير</h4>
+        <p class="text-on-surface-variant mb-5">أقصى حد لزراعة البصيلات بتقنية السفير لنتائج طبيعية المظهر.</p>
+        <ul class="space-y-3 mb-6 flex-grow">
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">medical_services</span>علاج كامل وأدوية</li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">bed</span>3 ليال في فندق 5 نجوم</li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">airport_shuttle</span>تنقلات المطار لكبار الشخصيات</li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">language</span>مترجم شخصي</li>
+        </ul>
+        <div class="pt-5 border-t border-surface-variant mb-5">
+          <span class="text-xs text-on-surface-variant block">تبدأ من</span>
+          <span class="text-2xl text-primary font-bold">7,800 ر.س</span>
+        </div>
+        <a data-wa="مرحباً، أرغب في حجز باقة زراعة الشعر بتقنية السفير" class="w-full bg-primary-container text-on-primary font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary">احجز الآن</a>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-xl border border-surface-variant shadow-sm overflow-hidden flex flex-col">
+      <div class="h-64 relative"><img class="w-full h-full object-cover" alt="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0GFr7G-izFljDU_kipfYyvFtAzY0anWKh-eQjyrGPeCkQGQMU6YKUpARFyiSA-xRyzKBRC5bbHop_ZFC10YrD8M9Rj0uUEFrXMXmbBlEkiVeblPVGQ1o23wSatSwPs3is7KXDwLKCAjFGS2Hq_P-Qk_70n7GQtC0GTuSq_yGQu3lVoAXlinaCSXpldCVRAPE8jb-c60KhZkl1ABMTady6Hm9UlBatCVxfmMUsOjABMnN6DlFH0q4a"/><div class="absolute inset-0 bg-primary-container/5 mix-blend-multiply"></div></div>
+      <div class="p-6 flex flex-col flex-grow">
+        <h4 class="text-xl font-semibold mb-2">الباقة VIP</h4>
+        <p class="text-on-surface-variant mb-5">تجربة متكاملة مع إقامة أطول وخدمة مخصصة.</p>
+        <ul class="space-y-3 mb-6 flex-grow">
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">medical_services</span>علاج كامل وأدوية ومنتجات عناية</li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">bed</span>5 ليال في فندق 5 نجوم</li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">airport_shuttle</span>تنقلات المطار والعيادة</li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">support_agent</span>منسق مرضى مخصص</li>
+        </ul>
+        <div class="pt-5 border-t border-surface-variant mb-5">
+          <span class="text-xs text-on-surface-variant block">تبدأ من</span>
+          <span class="text-2xl text-primary font-bold">9,500 ر.س</span>
+        </div>
+        <a data-wa="مرحباً، أرغب في حجز باقة VIP لزراعة الشعر" class="w-full border-2 border-primary-container text-primary-container font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-high">احجز الآن</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dental packages -->
+  <h3 id="dental" class="text-2xl font-semibold mb-6 flex items-center gap-2 scroll-mt-24">
+    <span class="material-symbols-outlined text-primary-container">dentistry</span> باقات الأسنان
+  </h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:px-24">
+    <div class="bg-surface-container-lowest rounded-xl border border-surface-variant shadow-sm overflow-hidden flex flex-col">
+      <div class="h-64 relative"><img class="w-full h-full object-cover" alt="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrOTDmH5_eDgdnaxlCPe_b4dvKgqVySA8UunWPlqb4EWDHAN65-5tTG1wk-Kw1PBO1h4jyMhAfBm0oErdX20TKkVsX5xgmgBFl5nQiCezQBoKXpwsJri5pV4WA8JjbzMlfLc8V1NUdrURjeh762hRN_w7cfCTWE80NGapi0Kq_rDQxa3u4T8ITpaUVV4_kYdNnE9VS5Jh3NBUCvZSBddSdF-S19dtbcL67AjWS_6Tm3zLirHU8sDx2"/><div class="absolute inset-0 bg-primary-container/5 mix-blend-multiply"></div></div>
+      <div class="p-6 flex flex-col flex-grow">
+        <h4 class="text-xl font-semibold mb-2">ابتسامة هوليوود</h4>
+        <p class="text-on-surface-variant mb-5">تيجان الزركونيا أو إيماكس الفاخرة المصممة خصيصًا لابتسامتك.</p>
+        <ul class="space-y-3 mb-6 flex-grow">
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">dentistry</span>تيجان فاخرة وعناية</li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">bed</span>5 ليال في فندق 5 نجوم</li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">airport_shuttle</span>تنقلات المطار والعيادة لكبار الشخصيات</li>
+          <li class="flex gap-3"><span class="material-symbols-outlined text-primary-container">support_agent</span>منسق مرضى مخصص</li>
+        </ul>
+        <div class="pt-5 border-t border-surface-variant mb-5">
+          <span class="text-xs text-on-surface-variant block">تبدأ من</span>
+          <span class="text-2xl text-primary font-bold">10,000 ر.س</span>
+        </div>
+        <a data-wa="مرحباً، أرغب في حجز باقة ابتسامة هوليوود" class="w-full border-2 border-primary-container text-primary-container font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-high">احجز الآن</a>
+      </div>
+    </div>
+    <div class="bg-surface-container-lowest rounded-xl border border-surface-variant shadow-sm overflow-hidden flex flex-col">
+      <div class="p-6 flex flex-col flex-grow justify-between">
+        <div>
+          <h4 class="text-xl font-semibold mb-2">باقة مخصصة</h4>
+          <p class="text-on-surface-variant mb-5">لم تجد ما يناسب حالتك؟ أرسل لنا صورة أسنانك ونجهز لك عرضاً خاصاً.</p>
+        </div>
+        <a data-wa="مرحباً، أرغب في عرض سعر لباقة مخصصة" class="w-full bg-primary-container text-on-primary font-bold py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary">اطلب عرض سعر</a>
+      </div>
+    </div>
+  </div>
 </div>
 </section>
-<!-- Packages Section -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface px-grid-gutter">
-<div class="max-w-container-max-width mx-auto">
-<div class="text-center mb-16 flex flex-col items-center">
-<h2 class="font-headline-md text-headline-md text-on-background mb-4">باقات طبية شاملة</h2>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">تسعير شفاف بدون تكاليف خفية. كل باقة تتضمن علاجك، إقامة فاخرة، وتنقلات كبار الشخصيات.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter lg:px-24">
-<!-- Hair Transplant Card -->
-<div class="bg-surface-container-lowest rounded-xl border border-surface-variant shadow-[0px_4px_20px_rgba(0,168,150,0.05)] hover:shadow-[0px_10px_30px_rgba(0,168,150,0.1)] transition-all duration-300 overflow-hidden flex flex-col">
-<div class="h-64 relative">
-<img class="w-full h-full object-cover" data-alt="A modern, high-tech hair transplant clinic room in Istanbul. Bright, clean lighting focusing on advanced medical equipment. The room has a minimalist aesthetic with white and turquoise accents. A comfortable, ergonomic patient chair sits in the center, exuding professionalism and premium care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0GFr7G-izFljDU_kipfYyvFtAzY0anWKh-eQjyrGPeCkQGQMU6YKUpARFyiSA-xRyzKBRC5bbHop_ZFC10YrD8M9Rj0uUEFrXMXmbBlEkiVeblPVGQ1o23wSatSwPs3is7KXDwLKCAjFGS2Hq_P-Qk_70n7GQtC0GTuSq_yGQu3lVoAXlinaCSXpldCVRAPE8jb-c60KhZkl1ABMTady6Hm9UlBatCVxfmMUsOjABMnN6DlFH0q4a"/>
-<div class="absolute inset-0 bg-primary-container/5 mix-blend-multiply"></div>
-<div class="absolute top-4 left-4 bg-surface-container-lowest/90 backdrop-blur px-3 py-1 rounded-full">
-<span class="font-label-caps text-label-caps text-primary-container font-bold">الأكثر شهرة</span>
-</div>
-</div>
-<div class="p-8 flex flex-col flex-grow">
-<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">زراعة الشعر بتقنية السفير</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">أقصى حد لزراعة البصيلات باستخدام تقنية السفير المتقدمة لنتائج طبيعية المظهر.</p>
-<ul class="space-y-4 mb-8 flex-grow">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">medical_services</span>
-<span class="font-body-md text-body-md text-on-background">علاج كامل وأدوية</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">bed</span>
-<span class="font-body-md text-body-md text-on-background">3 ليال في فندق 5 نجوم</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">airport_shuttle</span>
-<span class="font-body-md text-body-md text-on-background">تنقلات المطار لكبار الشخصيات</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">language</span>
-<span class="font-body-md text-body-md text-on-background">مترجم شخصي</span>
-</li>
-</ul>
-<div class="flex items-end justify-between mb-6 pt-6 border-t border-surface-variant">
-<div>
-<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">تبدأ من</span>
-<span class="font-headline-md text-headline-md text-primary font-bold">7,800 ر.س</span>
-</div>
-</div>
-<button class="w-full bg-primary-container text-on-primary font-body-md font-bold py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary transition-colors">
-                                احجز الآن
-                            </button>
-</div>
-</div>
-<!-- Dental Care Card -->
-<div class="bg-surface-container-lowest rounded-xl border border-surface-variant shadow-[0px_4px_20px_rgba(0,168,150,0.05)] hover:shadow-[0px_10px_30px_rgba(0,168,150,0.1)] transition-all duration-300 overflow-hidden flex flex-col">
-<div class="h-64 relative">
-<img class="w-full h-full object-cover" data-alt="A luxurious dental clinic in Istanbul with large windows overlooking the city. A state-of-the-art white dental chair is in focus. The environment is impeccably clean, featuring minimalist decor, sleek lines, and subtle turquoise branding elements. The mood is calming, clinical yet high-end." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrOTDmH5_eDgdnaxlCPe_b4dvKgqVySA8UunWPlqb4EWDHAN65-5tTG1wk-Kw1PBO1h4jyMhAfBm0oErdX20TKkVsX5xgmgBFl5nQiCezQBoKXpwsJri5pV4WA8JjbzMlfLc8V1NUdrURjeh762hRN_w7cfCTWE80NGapi0Kq_rDQxa3u4T8ITpaUVV4_kYdNnE9VS5Jh3NBUCvZSBddSdF-S19dtbcL67AjWS_6Tm3zLirHU8sDx2"/>
-<div class="absolute inset-0 bg-primary-container/5 mix-blend-multiply"></div>
-</div>
-<div class="p-8 flex flex-col flex-grow">
-<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">ابتسامة هوليوود</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">تيجان الزركونيا أو إيماكس الفاخرة المصممة خصيصًا لخلق ابتسامتك المثالية والطبيعية.</p>
-<ul class="space-y-4 mb-8 flex-grow">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">dentistry</span>
-<span class="font-body-md text-body-md text-on-background">تيجان فاخرة وعناية</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">bed</span>
-<span class="font-body-md text-body-md text-on-background">5 ليال في فندق 5 نجوم</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">airport_shuttle</span>
-<span class="font-body-md text-body-md text-on-background">تنقلات المطار والعيادة لكبار الشخصيات</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">support_agent</span>
-<span class="font-body-md text-body-md text-on-background">منسق مرضى مخصص</span>
-</li>
-</ul>
-<div class="flex items-end justify-between mb-6 pt-6 border-t border-surface-variant">
-<div>
-<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">تبدأ من</span>
-<span class="font-headline-md text-headline-md text-primary font-bold">10,000 ر.س</span>
-</div>
-</div>
-<button class="w-full border-2 border-primary-container text-primary-container font-body-md font-bold py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors">
-                                احجز الآن
-                            </button>
-</div>
-</div>
-</div>
-</div>
+
+<!-- Contact -->
+<section id="contact" class="py-16 px-6 bg-primary">
+  <div class="max-w-2xl mx-auto text-center text-on-primary flex flex-col items-center gap-5">
+    <span class="material-symbols-outlined text-5xl">support_agent</span>
+    <h2 class="text-3xl font-semibold">للاستفسار أكثر</h2>
+    <p class="text-lg opacity-90">تواصل مع خدمة العملاء عبر الواتساب، نحن متواجدون 24/7 للرد على أسئلتك.</p>
+    <a data-wa="مرحباً، لدي استفسار" class="bg-white text-primary font-bold px-8 py-4 rounded-lg flex items-center gap-2 hover:bg-surface-container-high shadow-lg">
+      <span class="material-symbols-outlined">chat</span> تواصل معنا عبر الواتساب
+    </a>
+  </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-surface-container-highest dark:bg-inverse-surface text-on-surface dark:text-inverse-on-surface font-body-md text-body-md w-full py-section-gap-mobile md:py-section-gap-desktop">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter px-grid-gutter max-w-container-max-width mx-auto">
-<div class="col-span-1 md:col-span-2 flex flex-col gap-4">
-<span class="font-headline-sm text-headline-sm font-bold text-primary">عيادات الرياض</span>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant max-w-sm">
-                    نربط بين الخبرة الطبية العالمية والضيافة الراقية. رحلتك نحو الأفضل تبدأ من هنا.
-                </p>
-</div>
-<div class="flex flex-col gap-3">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">زراعة الشعر</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">العناية بالأسنان</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">قصص المرضى</a>
-</div>
-<div class="flex flex-col gap-3">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">شارات الثقة</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">اتصل بنا</a>
-</div>
-</div>
-<div class="px-grid-gutter max-w-container-max-width mx-auto mt-8 pt-8 border-t border-surface-variant/50">
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant opacity-80">© 2024 عيادات الرياض. تميز طبي فاخر.</p>
-</div>
-</footer>
-<!-- BottomNavBar -->
-<nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface dark:bg-surface-dim shadow-[0px_-4px_20px_rgba(0,168,150,0.05)] shadow-lg">
-<div class="flex justify-around items-center h-16 w-full">
-<!-- WhatsApp (Active mapping based on intent: Consult/Contact) -->
-<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold active:bg-surface-container-high scale-105 transition-transform duration-300 w-full h-full" href="#">
-<span class="material-symbols-outlined mb-1">chat</span>
-<span class="font-label-caps text-label-caps">واتساب</span>
-</a>
-<!-- Services -->
-<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-high scale-105 transition-transform duration-300 w-full h-full" href="#">
-<span class="material-symbols-outlined mb-1">health_and_safety</span>
-<span class="font-label-caps text-label-caps">الخدمات</span>
-</a>
-<!-- Packages -->
-<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-high scale-105 transition-transform duration-300 w-full h-full" href="#">
-<span class="material-symbols-outlined mb-1">card_membership</span>
-<span class="font-label-caps text-label-caps">الباقات</span>
-</a>
-</div>
-</nav>
-</body></html>
 
-<!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Cure&amp;Care Istanbul - Premium Medical Tourism</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "tertiary-fixed": "#e1e3e4",
-                        "surface-container-high": "#e0e9f2",
-                        "on-tertiary-fixed-variant": "#454748",
-                        "surface": "#f6faff",
-                        "secondary-fixed-dim": "#b8c7e5",
-                        "secondary": "#505f79",
-                        "on-secondary-container": "#54637d",
-                        "on-error-container": "#93000a",
-                        "primary": "#006b5f",
-                        "surface-dim": "#d2dbe4",
-                        "on-secondary-fixed-variant": "#394760",
-                        "tertiary": "#5c5f60",
-                        "on-secondary": "#ffffff",
-                        "primary-fixed": "#79f7e3",
-                        "surface-tint": "#006b5f",
-                        "error": "#ba1a1a",
-                        "outline-variant": "#bbcac5",
-                        "on-surface-variant": "#3c4946",
-                        "primary-container": "#00a896",
-                        "on-tertiary-container": "#2c2f30",
-                        "surface-container-low": "#ecf5fe",
-                        "surface-container-highest": "#dbe4ed",
-                        "on-primary-container": "#00352e",
-                        "error-container": "#ffdad6",
-                        "on-error": "#ffffff",
-                        "on-tertiary": "#ffffff",
-                        "surface-container-lowest": "#ffffff",
-                        "secondary-container": "#d1e0ff",
-                        "on-primary": "#ffffff",
-                        "background": "#f6faff",
-                        "primary-fixed-dim": "#59dbc7",
-                        "on-primary-fixed": "#00201c",
-                        "on-surface": "#141d23",
-                        "inverse-primary": "#59dbc7",
-                        "on-secondary-fixed": "#0c1c32",
-                        "secondary-fixed": "#d5e3ff",
-                        "tertiary-fixed-dim": "#c5c7c8",
-                        "inverse-surface": "#293138",
-                        "inverse-on-surface": "#e9f2fb",
-                        "on-background": "#141d23",
-                        "on-tertiary-fixed": "#191c1d",
-                        "on-primary-fixed-variant": "#005047",
-                        "tertiary-container": "#949697",
-                        "surface-variant": "#dbe4ed",
-                        "surface-container": "#e6eff8",
-                        "outline": "#6c7a76",
-                        "surface-bright": "#f6faff"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "grid-gutter": "24px",
-                        "base": "8px",
-                        "section-gap-desktop": "120px",
-                        "section-gap-mobile": "64px",
-                        "container-max-width": "1280px"
-                    },
-                    "fontFamily": {
-                        "display-lg": ["Inter"],
-                        "headline-md": ["Inter"],
-                        "display-lg-mobile": ["Inter"],
-                        "label-caps": ["Inter"],
-                        "headline-sm": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "body-md": ["Inter"]
-                    },
-                    "fontSize": {
-                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
-                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
-                    }
-                },
-            },
-        }
-    </script>
-<style>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        .hero-overlay {
-            background: linear-gradient(135deg, rgba(246,250,255,0.95) 0%, rgba(246,250,255,0.7) 100%);
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
-<!-- TopAppBar -->
-<header class="bg-surface-container-lowest dark:bg-surface-dim text-primary dark:text-primary-fixed-dim font-headline-sm text-headline-sm fixed top-0 w-full z-50 shadow-sm dark:shadow-none transition-all duration-300">
-<div class="flex justify-between items-center px-grid-gutter max-w-container-max-width mx-auto h-20">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">medical_services</span>
-<span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-primary-fixed-dim">CURE&amp;CARE ISTANBUL</span>
-</div>
-<!-- Desktop Nav Cluster -->
-<nav class="hidden md:flex items-center gap-6">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary-container transition-colors duration-200" href="#">Services</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary-container transition-colors duration-200" href="#">Packages</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary-container transition-colors duration-200" href="#">Gallery</a>
-<button class="bg-primary-container text-on-primary font-body-md font-bold px-6 py-2 rounded flex items-center gap-2 hover:bg-primary transition-colors active:scale-95">
-                    Consult
-                </button>
-</nav>
-<!-- Mobile Consult Action (if needed, otherwise rely on BottomNav) -->
-<button class="md:hidden bg-primary-container text-on-primary font-label-caps px-4 py-2 rounded flex items-center gap-2 hover:bg-primary transition-colors active:scale-95">
-                    Consult
-            </button>
-</div>
-</header>
-<!-- Main Content -->
-<main class="flex-grow pt-20 pb-section-gap-mobile md:pb-0">
-<!-- Hero Section -->
-<section class="relative min-h-[707px] flex items-center">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" data-alt="A luxurious, modern hospital interior in Istanbul. Sunlight streaming through large windows illuminating clean white surfaces and subtle turquoise accents. Professional, calm, and high-end aesthetic. Minimalist design with comfortable seating areas, creating a welcoming medical spa environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSlPCZEgTSJRflBeBV87c1JnAl6UdOkNPLX4H_8uaEIZOXVI3FIfXvSGZrK08kG6PggX4Okpwt6xkjWxaMF1r7_6NT53_LmLHtU-rfDLXg2Af8GqMiqqdq_MDGAasVrARZQ1gQNEYQVaIgkCRiAHTLHNZQosqZlFy4pv1ut9qyheRY_R_UzVR1HntPg0GucbBf6amimaqBlwUFK678zAoIyAGNTT17iJAkzIMGWWbl7PqJlHhsoPcV"/>
-<div class="absolute inset-0 hero-overlay"></div>
-</div>
-<div class="relative z-10 max-w-container-max-width mx-auto px-grid-gutter w-full grid grid-cols-1 md:grid-cols-12 gap-grid-gutter">
-<div class="md:col-span-8 lg:col-span-6 flex flex-col gap-6">
-<div class="inline-flex items-center gap-2 bg-surface-container-highest px-4 py-2 rounded-full w-fit">
-<span class="material-symbols-outlined text-primary-container text-sm">verified</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">JCI Accredited Facilities</span>
-</div>
-<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-background">
-                        Premium Medical <span class="text-primary-container">Excellence</span> in Istanbul
-                    </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
-                        World-class Hair Transplants and aesthetic Dental Care. Experience luxury healthcare combined with premium hospitality in the heart of Turkey.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-4 mt-4">
-<button class="bg-primary-container text-on-primary font-body-md font-bold px-8 py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary transition-colors shadow-lg shadow-primary-container/20">
-<span class="material-symbols-outlined">chat</span>
-                            Get Free WhatsApp Consultation
-                        </button>
-<button class="border-2 border-primary-container text-primary-container font-body-md font-bold px-8 py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors">
-                            Explore Packages
-                        </button>
-</div>
-<div class="flex items-center gap-6 mt-8 pt-8 border-t border-surface-variant">
-<div class="flex flex-col">
-<span class="font-headline-sm text-headline-sm text-primary">15k+</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">Happy Patients</span>
-</div>
-<div class="w-px h-10 bg-surface-variant"></div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-headline-sm text-primary">5★</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">Luxury Hotels</span>
-</div>
-<div class="w-px h-10 bg-surface-variant"></div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-headline-sm text-primary">24/7</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">VIP Support</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Packages Section -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface px-grid-gutter">
-<div class="max-w-container-max-width mx-auto">
-<div class="text-center mb-16 flex flex-col items-center">
-<h2 class="font-headline-md text-headline-md text-on-background mb-4">All-Inclusive Medical Packages</h2>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Transparent pricing with zero hidden costs. Every package includes your treatment, luxury accommodation, and VIP transfers.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gutter lg:px-24">
-<!-- Hair Transplant Card -->
-<div class="bg-surface-container-lowest rounded-xl border border-surface-variant shadow-[0px_4px_20px_rgba(0,168,150,0.05)] hover:shadow-[0px_10px_30px_rgba(0,168,150,0.1)] transition-all duration-300 overflow-hidden flex flex-col">
-<div class="h-64 relative">
-<img class="w-full h-full object-cover" data-alt="A modern, high-tech hair transplant clinic room in Istanbul. Bright, clean lighting focusing on advanced medical equipment. The room has a minimalist aesthetic with white and turquoise accents. A comfortable, ergonomic patient chair sits in the center, exuding professionalism and premium care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0GFr7G-izFljDU_kipfYyvFtAzY0anWKh-eQjyrGPeCkQGQMU6YKUpARFyiSA-xRyzKBRC5bbHop_ZFC10YrD8M9Rj0uUEFrXMXmbBlEkiVeblPVGQ1o23wSatSwPs3is7KXDwLKCAjFGS2Hq_P-Qk_70n7GQtC0GTuSq_yGQu3lVoAXlinaCSXpldCVRAPE8jb-c60KhZkl1ABMTady6Hm9UlBatCVxfmMUsOjABMnN6DlFH0q4a"/>
-<div class="absolute inset-0 bg-primary-container/5 mix-blend-multiply"></div>
-<div class="absolute top-4 right-4 bg-surface-container-lowest/90 backdrop-blur px-3 py-1 rounded-full">
-<span class="font-label-caps text-label-caps text-primary-container font-bold">Most Popular</span>
-</div>
-</div>
-<div class="p-8 flex flex-col flex-grow">
-<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Sapphire FUE Hair Transplant</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Maximum graft implantation with advanced Sapphire technology for natural-looking results.</p>
-<ul class="space-y-4 mb-8 flex-grow">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">medical_services</span>
-<span class="font-body-md text-body-md text-on-background">Full Treatment &amp; Meds</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">bed</span>
-<span class="font-body-md text-body-md text-on-background">3 Nights in 5-Star Hotel</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">airport_shuttle</span>
-<span class="font-body-md text-body-md text-on-background">VIP Airport Transfers</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">language</span>
-<span class="font-body-md text-body-md text-on-background">Personal Translator</span>
-</li>
-</ul>
-<div class="flex items-end justify-between mb-6 pt-6 border-t border-surface-variant">
-<div>
-<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">Starting from</span>
-<span class="font-headline-md text-headline-md text-primary font-bold">€1,890</span>
-</div>
-</div>
-<button class="w-full bg-primary-container text-on-primary font-body-md font-bold py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary transition-colors">
-                                Book Now
-                            </button>
-</div>
-</div>
-<!-- Dental Care Card -->
-<div class="bg-surface-container-lowest rounded-xl border border-surface-variant shadow-[0px_4px_20px_rgba(0,168,150,0.05)] hover:shadow-[0px_10px_30px_rgba(0,168,150,0.1)] transition-all duration-300 overflow-hidden flex flex-col">
-<div class="h-64 relative">
-<img class="w-full h-full object-cover" data-alt="A luxurious dental clinic in Istanbul with large windows overlooking the city. A state-of-the-art white dental chair is in focus. The environment is impeccably clean, featuring minimalist decor, sleek lines, and subtle turquoise branding elements. The mood is calming, clinical yet high-end." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrOTDmH5_eDgdnaxlCPe_b4dvKgqVySA8UunWPlqb4EWDHAN65-5tTG1wk-Kw1PBO1h4jyMhAfBm0oErdX20TKkVsX5xgmgBFl5nQiCezQBoKXpwsJri5pV4WA8JjbzMlfLc8V1NUdrURjeh762hRN_w7cfCTWE80NGapi0Kq_rDQxa3u4T8ITpaUVV4_kYdNnE9VS5Jh3NBUCvZSBddSdF-S19dtbcL67AjWS_6Tm3zLirHU8sDx2"/>
-<div class="absolute inset-0 bg-primary-container/5 mix-blend-multiply"></div>
-</div>
-<div class="p-8 flex flex-col flex-grow">
-<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Hollywood Smile Makeover</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Premium Zirconia or E-Max crowns tailored to create your perfect, natural-looking smile.</p>
-<ul class="space-y-4 mb-8 flex-grow">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">dentistry</span>
-<span class="font-body-md text-body-md text-on-background">Premium Crowns &amp; Care</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">bed</span>
-<span class="font-body-md text-body-md text-on-background">5 Nights in 5-Star Hotel</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">airport_shuttle</span>
-<span class="font-body-md text-body-md text-on-background">VIP Airport &amp; Clinic Transfers</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary-container">support_agent</span>
-<span class="font-body-md text-body-md text-on-background">Dedicated Patient Coordinator</span>
-</li>
-</ul>
-<div class="flex items-end justify-between mb-6 pt-6 border-t border-surface-variant">
-<div>
-<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">Starting from</span>
-<span class="font-headline-md text-headline-md text-primary font-bold">€2,450</span>
-</div>
-</div>
-<button class="w-full border-2 border-primary-container text-primary-container font-body-md font-bold py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors">
-                                Book Now
-                            </button>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
 <!-- Footer -->
-<footer class="bg-surface-container-highest dark:bg-inverse-surface text-on-surface dark:text-inverse-on-surface font-body-md text-body-md w-full py-section-gap-mobile md:py-section-gap-desktop">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-grid-gutter px-grid-gutter max-w-container-max-width mx-auto">
-<div class="col-span-1 md:col-span-2 flex flex-col gap-4">
-<span class="font-headline-sm text-headline-sm font-bold text-primary">CURE&amp;CARE ISTANBUL</span>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant max-w-sm">
-                    Bridging world-class medical expertise with luxury Turkish hospitality. Your journey to a better you starts here.
-                </p>
-</div>
-<div class="flex flex-col gap-3">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">Hair Transplants</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">Dental Care</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">Patient Stories</a>
-</div>
-<div class="flex flex-col gap-3">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">Trust Badges</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all opacity-80 hover:opacity-100" href="#">Contact Us</a>
-</div>
-</div>
-<div class="px-grid-gutter max-w-container-max-width mx-auto mt-8 pt-8 border-t border-surface-variant/50">
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant opacity-80">© 2024 Cure&amp;Care Istanbul. Premium Medical Excellence.</p>
-</div>
+<footer class="bg-surface-container-highest w-full py-12 pb-28 md:pb-12">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 px-6 max-w-[1280px] mx-auto">
+    <div class="md:col-span-2 flex flex-col gap-4">
+      <span class="text-2xl font-bold text-primary">عيادات الرياض</span>
+      <p class="text-on-surface-variant max-w-sm">نربط بين الخبرة الطبية العالمية والضيافة الراقية. رحلتك نحو الأفضل تبدأ من هنا.</p>
+    </div>
+    <div class="flex flex-col gap-3">
+      <a class="text-on-surface-variant hover:text-primary underline" href="#hair">زراعة الشعر</a>
+      <a class="text-on-surface-variant hover:text-primary underline" href="#dental">العناية بالأسنان</a>
+      <a class="text-on-surface-variant hover:text-primary underline" href="#packages">الباقات</a>
+    </div>
+    <div class="flex flex-col gap-3">
+      <a class="text-on-surface-variant hover:text-primary underline" href="#contact">اتصل بنا</a>
+      <a data-wa="مرحباً" class="text-on-surface-variant hover:text-primary underline">واتساب</a>
+    </div>
+  </div>
+  <div class="px-6 max-w-[1280px] mx-auto mt-8 pt-8 border-t border-surface-variant">
+    <p class="text-on-surface-variant opacity-80">© 2024 عيادات الرياض. تميز طبي فاخر.</p>
+  </div>
 </footer>
-<!-- BottomNavBar -->
-<nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface dark:bg-surface-dim shadow-[0px_-4px_20px_rgba(0,168,150,0.05)] shadow-lg">
-<div class="flex justify-around items-center h-16 w-full">
-<!-- WhatsApp (Active mapping based on intent: Consult/Contact) -->
-<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold active:bg-surface-container-high scale-105 transition-transform duration-300 w-full h-full" href="#">
-<span class="material-symbols-outlined mb-1">chat</span>
-<span class="font-label-caps text-label-caps">WhatsApp</span>
-</a>
-<!-- Services -->
-<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-high scale-105 transition-transform duration-300 w-full h-full" href="#">
-<span class="material-symbols-outlined mb-1">health_and_safety</span>
-<span class="font-label-caps text-label-caps">Services</span>
-</a>
-<!-- Packages -->
-<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant active:bg-surface-container-high scale-105 transition-transform duration-300 w-full h-full" href="#">
-<span class="material-symbols-outlined mb-1">card_membership</span>
-<span class="font-label-caps text-label-caps">Packages</span>
-</a>
-</div>
+
+<!-- Bottom nav (mobile) -->
+<nav class="fixed bottom-0 w-full z-50 md:hidden bg-surface shadow-lg">
+  <div class="flex justify-around items-center h-16 w-full">
+    <a data-wa="مرحباً، أرغب في استشارة" class="flex flex-col items-center justify-center text-primary font-bold w-full h-full">
+      <span class="material-symbols-outlined">chat</span><span class="text-xs">واتساب</span>
+    </a>
+    <a href="#hair" class="flex flex-col items-center justify-center text-on-surface-variant w-full h-full">
+      <span class="material-symbols-outlined">spa</span><span class="text-xs">الشعر</span>
+    </a>
+    <a href="#dental" class="flex flex-col items-center justify-center text-on-surface-variant w-full h-full">
+      <span class="material-symbols-outlined">dentistry</span><span class="text-xs">الأسنان</span>
+    </a>
+    <a href="#packages" class="flex flex-col items-center justify-center text-on-surface-variant w-full h-full">
+      <span class="material-symbols-outlined">card_membership</span><span class="text-xs">الباقات</span>
+    </a>
+  </div>
 </nav>
+
+<script>
+  // غيّر الرقم هنا فقط (بدون + أو أصفار): مثال السعودية 9665XXXXXXXX
+  const WHATSAPP_NUMBER = "966500000000";
+
+  document.querySelectorAll("[data-wa]").forEach(function (el) {
+    el.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(el.dataset.wa);
+    el.target = "_blank";
+    el.rel = "noopener";
+  });
+</script>
 </body></html>
